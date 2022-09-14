@@ -23,7 +23,7 @@ static void ExecuteClient()
 
             Console.WriteLine($"Socket connected {sender.RemoteEndPoint.ToString()}");
 
-            byte[] messageSent = Encoding.ASCII.GetBytes("Test Client");
+            byte[] messageSent = Encoding.ASCII.GetBytes("Test Client<EOF>");
             int byteSent = sender.Send(messageSent);
 
             byte[] messageRecieved = new byte[1024];
